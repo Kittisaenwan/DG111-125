@@ -1,0 +1,39 @@
+```mermaid
+flowchart TD
+Start([Start]) --> Input[/รับคะแนน score/]
+Input --> D1{score >= 80?}
+D1 -->|Yes| A[เกรด = A]
+D1 -->|No| D2{score >= 70?}
+D2 -->|Yes| B[เกรด = B]
+D2 -->|No| D3{score >= 60?}
+D3 -->|Yes| C[เกรด = C]
+D3 -->|No| D4{score >= 50?}
+D4 -->|Yes| D[เกรด = D]
+D4 -->|No| F[เกรด = F]
+A & B & C & D & F --> Output[/แสดงเกรด/]
+Output --> End([End])
+```
+
+
+
+```mermaid
+flowchart TD
+Start([Start]) --> Input[/รับ a และ b /]
+Input --> D1{a > b?}
+D1 -->|Yes| AOutput[/แสดง b/]
+D1 -->|No| BOutput[/แสดง b/]
+AOutput & BOutput --> End([End])
+```
+
+
+
+```mermaid
+flowchart TD
+Start([Start]) --> Input[/รับ N /]
+Input --> D1[i = 1]
+D1 --> A1{i <= N?}
+A1 -->|Yes| Y1[/พิมพ์ i/]
+A1 -->|No| End([end])
+Y1 --> ip[i = i + 1]
+ip --> D1
+```

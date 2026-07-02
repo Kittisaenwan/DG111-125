@@ -1,0 +1,50 @@
+Begin [ตรวจสอบเกรด]
+Input [รับคะแนน]
+IF [คะแนน >= 80] THEN
+    OUTPUT [เกรด A]
+ELSE IF [คะแนน >= 70] THEN
+    OUTPUT [เกรด B]
+ELSE IF [คะแนน >= 60] THEN
+    OUTPUT [เกรด C]
+ELSE IF [คะแนน >= 50] THEN
+    OUTPUT [เกรด D]
+ELSE
+    OUTPUT [เกรด F]
+End
+
+
+
+
+
+
+
+Begin [หาค่าสูงสุด 2 จัวเลข]
+Input [A, B]
+IF [A > B] THEN
+    Output [A]
+ELSE
+    Output [B]
+end
+
+
+
+
+
+Begin [นับจาก 1 ถึง N]
+    Input [N]
+    process [i = 1]
+
+    while i <= N? do
+        print [ i ]
+        process [i = i + 1]
+    End while
+
+End
+
+
+
+
+
+
+
+

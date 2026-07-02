@@ -1,0 +1,26 @@
+```mermaid
+flowchart TD
+Start([Start]) --> Input[/รับ player_Clashscore, enemy_Clashscore,
+enemy_hp, player_hp/]
+Input --> Calc["damage = max(Bigger Clashscore)"]
+Calc --> Reduce["smaller clashscore = opposite = enemy - damage"]
+Reduce --> D1{enemy_hp <= 0?}
+D1 -->|Yes| Win[/แสดง Victory!/]
+D1 -->|No| Show[/แสดง enemy_hp ที่เหลือ/]
+Win & Show --> End([End])
+```
+
+
+```mermaid
+flowchart TD
+Start([Start]) --> XP[/รับ รับ Current xp, xp_needed,
+level/]
+XP --> |yes| lv[level = level + 1]
+lv --> lv2[xp needed = xp_needed x 1.5]
+lv2 --> lv3[current_xp = 0]
+lv3 & XP --> |No|SH[/แสดง level  และ current_xp/]
+SH --> End([end])
+```
+
+
+
